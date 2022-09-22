@@ -218,6 +218,9 @@ div.carousel {
 }
 
 /* .carousel_item, */
+.carousel_item{
+  display: none;
+}
 .hidden {
   display: none;
 }
@@ -258,9 +261,11 @@ div.carousel {
 .next:focus {
   margin: 0;
   /* Pick a good border colour and check out how it works with your buttons */
+  border-color: #4a2b25;
 }
 
 .prev:hover,
 .next:hover {
   /* Pick a good background colour for your hover pseudoclass */
+  background-color: rgb(235, 144, 17);
 }
