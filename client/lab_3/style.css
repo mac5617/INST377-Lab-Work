@@ -195,7 +195,11 @@ form {
   width: 150px;
   height: 150px;
 }
-
+.TextDesc {
+  height: 75px;
+  width: 400px;
+  text-align: center;
+}
 
 /* Carousel */
 div.carousel {

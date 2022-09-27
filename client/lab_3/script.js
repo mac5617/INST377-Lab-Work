@@ -18,7 +18,6 @@ const slidesArray = Array.from(slides);
 // Figure out how many slides we have available
 const totalSlides = slidesArray.length;
 
-console.log(totalSlides);
 function updateSlidePosition() {
   // Using the .forEach array method, (array.forEach((element) => { per-element work goes here }))
   slidesArray.forEach((element) => {
@@ -29,10 +28,13 @@ function updateSlidePosition() {
   // and remove the 'visible' class from each classList
   // then add a class 'hidden' to all of them
   slidesArray[slidePosition].classList.add('visible');
+  const textDescName = document.querySelector('div.visible > img').alt;
+  document.querySelector('div.TextDesc').innerHTML = textDescName;
+  console.log(textDescName);
   // outside your .forEach,
   // add a 'visible' class to the slide at the current slidePosition in slides
 }
-
+updateSlidePosition();
 function moveToNextSlide() {
   /*
     add an if statement here that checks
@@ -41,7 +43,6 @@ function moveToNextSlide() {
     if not, set the slidePosition to the current position plus one
   */
   if (slidePosition < totalSlides - 1) {
-    console.log(slidePosition);
     slidePosition += 1;
   } else {
     slidePosition = 0;
